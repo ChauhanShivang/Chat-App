@@ -6,8 +6,6 @@ import { connectDB } from "./lib/db.js"
 import userRouter from "./routes/userRoutes.js"
 import messageRouter from "./routes/messageRoutes.js"
 import {Server} from "socket.io"
-//
-import serverless from "serverless-http"
 
 // create express app using HTTP server
 const app = express()
@@ -55,7 +53,4 @@ if(process.env.NODE_ENV !== "production"){
 }
 
 // Export server for Vercel
-// export default server
-
-// Export for serverless use
-export const handler = serverless(app)
+export default server
