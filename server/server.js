@@ -13,7 +13,7 @@ const server = http.createServer(app)
 
 // initialize socket.io server
 export const io = new Server(server, {
-    cors: {origin: "http://localhost:5173", methods: ['GET', 'POST'], credentials: true,}
+    cors: {origin: "https://chat-app-gold-theta.vercel.app/login", methods: ['GET', 'POST'], credentials: true,}
 })
 
 // store online users
